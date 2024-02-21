@@ -1,6 +1,6 @@
 téma: Boxversenyről adatbázis
 ---------------------------------------------
-szinek:kek,fekete,feher
+szinek:piros,fekete,feher
 fekete: RGB(0,0,0)
 feher: RGB(255,255,255)
 piros: RGB(232,0,5)
