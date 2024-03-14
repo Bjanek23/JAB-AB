@@ -1,0 +1,31 @@
+sulycsoport(id,vnev,sulycsoport,nem)
+id		Egész szám, a súlycsoport azonosítója,PK
+sulycsoport	Szöveg, a súlycsoport neve
+nem		Szöveg, a versenyző neme
+
+versenyzok(versenyzoid,vnev,nem,nemzetiseg,szul_ev)
+versenyzoid	Egész szám, a versenyzők azonosítója,PK
+vnev		Szöveg, a versenyző neve  	
+nem		Szöveg, a versenyző neme
+nemzetiseg	Szöveg, a versenyző nemzetisége
+szul_ev	  	Egész szám, a versenyző születési éve,FK
+
+merkozesek(merkozesekid,vnevid1,vnevid2,gyoztes,pontozas,KO,ring,bnev,sulycsopid,datum)
+merkozesekid	Egész szám, a mérkőzés azonosítója,PK	
+vnevid1		Egész szám, a versenyző azonosítója1,FK
+vnevid2		Egész szám, a versenyző azonosítója2,FK
+gyoztesid	Egész szám, mérkőzésnek a győztes azonosítója,FK
+pontozas	Szöveg, a mérkőzés pontozása 
+KO		Egész szám, a mérkőzés alatt történő KO-k száma 1 vagy 0,FK
+ring		Szöveg,a mérkőzés ring csoportja
+b_id		Egész szám, a mérkőzés bíró azonosítója,FK
+sulycsopid	Egész szám, a mérkőzés súlycsoport azonosítója,FK
+datum		Egész szám, a mérkőzés dátuma
+
+birok(biroid,bnev,nem,nemzetiseg)
+biroid 		Egész szám, a biró azonosítója,PK
+bnev		Szöveg, a bírók neve
+nem		Szöveg, a bírók  neme
+nemzetiseg	Szöveg, a birók nemzetisége
+
+
