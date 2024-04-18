@@ -1,0 +1,44 @@
+1.	A Hány versenyző vesz részt?
+2.	B Milyen súlycsoportok vannak?
+3.	J Melyik országból jött a legtöbb versenyző idén (2024)?
+4.	A Ki a legöregebb sportoló 2023-as rendezvényen 92+ súlycsoportban? Nevét és születési idejét írassa ki.
+5.	J Ki a 3 legfiatalabb sportoló 2024-ben? Nevét, születési idejét és országát írassa ki.
+6.	B Hány győzelme (Hámori Luca 66kg-os) versenyzőnek az adatbázisban.
+7.	A Hány győzelme van összesen a Magyar versenyzőknek 2023-ban és 2024-ben összesen?
+8.	B Hány férfi versenyző nyert KO által 48 és 92+ súlycsoportban? Írassa ki a versenyző nevét, KO számát (legalább 1 KO)
+9.	J Melyik női versenyzőnek van a legtöbb KO-ja a 2024-es rendezvényen? Írassa ki a nevét
+10.	B Ki nem vesztett egy meccset sem női versenyzők közül 2024-ben? Írassa ki a nevét.
+11.	J Ki mennyi mérkőzést játszott? írassa ki növekvő sorrendbe: SELECT vnev,COUNT(merkozesekid)
+12.	A Kik azok a versenyzők akik vesztettek meccset 50kg-os súlycsoportban? írassa ki a nevét
+13.	B Kik azok a versenyzők akik 2004-ben születtek? írd ki a nevüket, nemét és súlycsoportját!
+14.	J Írd ki annak a női versenyző nevét akinek 2-nél több KO által nyert meccse van, a játszott meccseit és az évet is írasd ki.
+15.	A Melyik ország szerezte a legtöbb győzelmet? Írd ki az ország nevét.
+16.	J Kik azok a versenyzők akik a legjobb helyezést érték el 2023-ban? (első 3 helyezés) írd ki a nevüket és az országot.
+17.	B Írassa ki azokat a versenyzőket akik a 2023-as versenyen vettek részt, a helyezését is írassa ki és KO-val nyert legalább 2 meccset!
+18.	J Hány mérkőzést nem játszottak le?
+
+
+Dorina:
+19.	A Listázza azokat a női boxolókat, akik mérkőzéseket nyertek és a születési évüket.
+20.	B Listázza ki a ringet és azoknak a boxolóknak a nevét akik több mérkőzést is nyertek.
+
+Tanár úr:
+21.	B Kik azok a versenyzők, akik 2023-ban és 2024-ben is részt vettek a versenyen? Listázza ki a nevüket, országukat, 2023-as súly csoportjukat, 2024-es súly csoportjukat!
+
+22.	A Kik azok a versenyzők, akik 2023-ban és 2024-ben is bajnokok lettek?
+
+23.	J Évenként és súly csoportonként hány versenyző indult? Listázza ki az évet, a súlycsoportot és az indulók számát!
+
+24.	B Listázza ki az országokat és a 2023-ban illetve 2024-ben indult versenyzők számát! Legelől legyen az az ország amelyik a két évben együttesen a legtöbb versenyzőt indított! (egyeztetni a megoldásról) Ország | 2023-as indulók száma | 2024-es indulók száma | összes induló!
+
+25.	J Írassa ki hány férfi és női versenyző indult 2023-ban ill. 2024-ben!
+férfi indulók 2023-ban | nő indulók 2023-ban | férfi indulók 2024-ben | női indulók 2024-ben
+
+26.	A Hány súlycsoportban indulhattak a versenyzők?
+
+27.	J Kik lettek a bajnokok 2024-ben és hány KO győzelmük volt?
+súlycsoport | név| KO szám
+
+28.	B Melyik súlycsoportban indultak a legtöbben 2024-ben?
+
++2 még érkezik a jövőben Tanár úr-tól.
