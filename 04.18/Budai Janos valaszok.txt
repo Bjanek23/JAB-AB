@@ -1,0 +1,2 @@
+11.
+FROM versenyzok,merkozesek WHERE versenyzok.versenyzoid=merkozesek.vnevid1 AND merkozesek.vnevid1 OR merkozesek.vnevid2=versenyzok.versenyzoid GROUP BY vnev ORDER BY COUNT(merkozesekid) ASC
