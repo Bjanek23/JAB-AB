@@ -1,0 +1,33 @@
+1.SELECT COUNT(vnev)
+FROM versenyzok
+
+4.
+
+
+7.SELECT COUNT(gyoztesid)'a magyar versenyzők győzelem száma'
+FROM versenyzok,merkozesek
+WHERE versenyzok.versenyzoid=merkozesek.vnevid1
+AND nemzetiseg='HUN'
+AND versenyzok.versenyzoid=merkozesek.gyoztesid
+
+12.
+
+
+15.
+
+
+19.
+
+22.
+
+26.
+
+
+29.
+
+
+
+30.
+
+
+
