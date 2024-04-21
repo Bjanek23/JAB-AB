@@ -1,0 +1,19 @@
+3.
+SELECT nemzetiseg, COUNT(DISTINCT versenyzoid) AS versenyzo_szam FROM merkozesek JOIN versenyzok ON merkozesek.vnevid1 = versenyzok.versenyzoid OR merkozesek.vnevid2 = versenyzok.versenyzoid WHERE datum = 2024 GROUP BY nemzetiseg ORDER BY versenyzo_szam DESC; 
+
+5.
+SELECT versenyzok.vnev,versenyzok.szul_ev,versenyzok.nemzetiseg FROM merkozesek JOIN versenyzok ON merkozesek.vnevid1 = versenyzok.versenyzoid OR merkozesek.vnevid2 = versenyzok.versenyzoid WHERE merkozesek.datum=2024 AND szul_ev IS NOT NULL ORDER BY szul_ev DESC LIMIT 3; 
+
+9
+SELECT versenyzok.vnev,merkozesek.KO
+FROM merkozesek
+JOIN versenyzok ON merkozesek.vnevid1=versenyzok.versenyzoid OR merkozesek.vnevid2=versenyzok.versenyzoid
+WHERE versenyzok.versenyzoid=merkozesek.gyoztesid
+AND versenyzok.nem='no'
+AND merkozesek.KO=1
+
+11.
+SELECT vnev,COUNT(merkozesekid)FROM versenyzok,merkozesek WHERE versenyzok.versenyzoid=merkozesek.vnevid1 AND merkozesek.vnevid1 OR merkozesek.vnevid2=versenyzok.versenyzoid GROUP BY vnev ORDER BY `COUNT(merkozesekid)` DESC 
+
+14.
+SELECT versenyzok.vnev AS nev, COUNT(*),merkozesek.datum FROM versenyzok JOIN merkozesek ON versenyzok.versenyzoid = merkozesek.vnevid1 OR versenyzok.versenyzoid = merkozesek.vnevid2 WHERE versenyzok.nem = 'no' AND merkozesek.KO > 1; 
