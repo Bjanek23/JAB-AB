@@ -33,5 +33,5 @@ férfi indulók 2023-ban | nő indulók 2023-ban | férfi indulók 2024-ben | n�
 27.	J Kik lettek a bajnokok 2024-ben és hány KO győzelmük volt?
 súlycsoport | név| KO szám
 28.	B Melyik súlycsoportban indultak a legtöbben 2024-ben?
-29. Ki az a 3 bíró aki a legkevesebb mérkőzést vezette?
-30. Kik voltak a legidősebb és legfiatalabb versenyzők súlycsoportonként 2023-ban?
+29. A Ki az a 3 bíró aki a legkevesebb mérkőzést vezette?
+30. A Kik voltak a legidősebb és legfiatalabb versenyzők súlycsoportonként 2023-ban?
