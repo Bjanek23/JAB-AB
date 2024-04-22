@@ -1,6 +1,7 @@
-sulycsoport(id,vnev,sulycsoport,nem)
+sulycsoport(id,sulycsoport,nem)
 id		Egész szám, a súlycsoport azonosítója,PK
 sulycsoport	Szöveg, a súlycsoport neve
+suly  Szöveg, súlycsoportokhoz tartozó súly
 nem		Szöveg, a versenyző neme
 
 versenyzok(versenyzoid,vnev,nem,nemzetiseg,szul_ev)
