@@ -16,4 +16,11 @@ AND merkozesek.KO=1
 SELECT vnev,COUNT(merkozesekid)FROM versenyzok,merkozesek WHERE versenyzok.versenyzoid=merkozesek.vnevid1 AND merkozesek.vnevid1 OR merkozesek.vnevid2=versenyzok.versenyzoid GROUP BY vnev ORDER BY `COUNT(merkozesekid)` DESC 
 
 14.
-SELECT versenyzok.vnev AS nev, COUNT(*),merkozesek.datum FROM versenyzok JOIN merkozesek ON versenyzok.versenyzoid = merkozesek.vnevid1 OR versenyzok.versenyzoid = merkozesek.vnevid2 WHERE versenyzok.nem = 'no' AND merkozesek.KO > 1; 
+SELECT versenyzok.vnev AS nev, COUNT(*),merkozesek.datum FROM versenyzok JOIN merkozesek ON versenyzok.versenyzoid = merkozesek.vnevid1 OR versenyzok.versenyzoid = merkozesek.vnevid2 WHERE versenyzok.nem = 'no' AND merkozesek.KO > 1 GROUP BY versenyzok.vnev
+
+16. konkrétan arany ezust bronzérmes tábla nem lett meghatározva viszont ki lehet szamolni azokat akik 2023-ban nyertek a legtobbet
+SELECT versenyzok.vnev,COUNT(merkozesek.gyoztesid) FROM versenyzok JOIN merkozesek ON versenyzok.versenyzoid=merkozesek.vnevid1 OR versenyzok.versenyzoid=merkozesek.vnevid2 WHERE merkozesek.gyoztesid=versenyzok.versenyzoid AND merkozesek.datum=2023 GROUP BY versenyzok.vnev ORDER BY COUNT(merkozesek.gyoztesid) DESC
+
+18.
+SELECT COUNT(*) FROM merkozesek WHERE pontozas='WO'
+
