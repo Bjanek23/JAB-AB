@@ -1,0 +1,66 @@
+1.SELECT COUNT(vnev)
+FROM versenyzok
+
+4.SELECT MAX(vnev)
+FROM versenyzok,sulycsoport,merkozesek
+WHERE sulycsoport.suly='92+'
+AND merkozesek.datum='2023'
+
+
+7.SELECT COUNT(gyoztesid)'a magyar versenyzők győzelem száma'
+FROM versenyzok,merkozesek
+WHERE versenyzok.versenyzoid=merkozesek.vnevid1
+AND nemzetiseg='HUN'
+AND versenyzok.versenyzoid=merkozesek.gyoztesid
+
+12.SELECT DISTINCT vnev
+FROM versenyzok
+INNER JOIN merkozesek ON versenyzok.versenyzoid = merkozesek.vnevid1 OR versenyzok.versenyzoid = merkozesek.vnevid2
+INNER JOIN sulycsoport ON merkozesek.sulycsopid = sulycsoport.id
+WHERE sulycsoport.suly= '50kg' AND gyoztesid != versenyzok.versenyzoid
+
+
+15.SELECT versenyzok.nemzetiseg AS 'Ország', COUNT(*) AS 'Győzelmek száma'
+FROM merkozesek 
+JOIN versenyzok  ON merkozesek.gyoztesid = versenyzok.versenyzoid
+GROUP BY versenyzok.nemzetiseg
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+
+19.SELECT vnev, YEAR(szul_ev) AS szuletesi_ev
+FROM versenyzok
+INNER JOIN merkozesek ON versenyzok.versenyzoid = merkozesek.vnevid1 OR versenyzok.versenyzoid = merkozesek.vnevid2
+WHERE nem = 'no' AND merkozesek.gyoztesid;
+
+22.SELECT versenyzok.versenyzoid,versenyzok.vnev
+FROM versenyzok 
+INNER JOIN merkozesek  ON versenyzok.versenyzoid = merkozesek.vnevid1
+OR versenyzok.versenyzoid = merkozesek.vnevid2
+WHERE merkozesek.gyoztesid = versenyzok.versenyzoid
+AND YEAR (merkozesek.datum) = 2023
+AND EXISTS (
+SELECT gyoztesid
+FROM merkozesek
+WHERE gyoztesid = versenyzok.versenyzoid
+AND YEAR (datum) = 2024
+);
+
+26.SELECT COUNT(DISTINCT sulycsoport) AS 'Súlycsoportok száma'
+FROM sulycsoport;
+
+
+29.SELECT bnev AS 'Bíró neve', COUNT(merkozesekid) AS 'Mérkőzések száma'
+FROM merkozesek
+JOIN birok ON merkozesek.b_id = birok.biroid
+GROUP BY bnev
+ORDER BY COUNT(merkozesekid)
+LIMIT 3;
+
+
+
+30.SELECT MIN(vnev),MAX(vnev),sulycsoport
+FROM versenyzok,sulycsoport
+
+
+
