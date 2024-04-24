@@ -1,0 +1,48 @@
+2.
+SELECT sulycsoport
+FROM sulycsoport;
+
+4
+SELECT v.vnev AS VersenyzoNeve, v.szul_ev AS SzuletesiIdeje
+FROM versenyzok v
+JOIN merkozesek m ON v.versenyzoid = m.vnevid1 OR v.versenyzoid = m.vnevid2
+JOIN sulycsoport s ON m.sulycsopid = s.id
+WHERE s.sulycsoport >= '91+' AND m.datum = '2023'
+AND v.nem = 'ferfi'
+AND szul_ev IS NOT NULL
+ORDER BY v.szul_ev ASC
+LIMIT 1;
+
+6.
+SELECT COUNT(*) 'Hámori Luca győztes meccsei'
+FROM merkozesek
+WHERE gyoztesid = 201
+GROUP BY gyoztesid;
+
+8.
+SELECT versenyzok.vnev , COUNT(merkozesek.KO)
+FROM merkozesek
+JOIN versenyzok ON  versenyzok.versenyzoid=merkozesek.vnevid1  OR versenyzok.versenyzoid=merkozesek.vnevid2 
+JOIN sulycsoport ON merkozesek.sulycsopid = sulycsoport.id
+WHERE versenyzok.nem = 'ferfi' AND sulycsoport.sulycsoport = 'Kislégsúly' OR sulycsoport.sulycsoport = 'Szupernehézsúly'
+AND merkozesek.KO=1
+AND merkozesek.gyoztesid=versenyzok.versenyzoid
+GROUP BY merkozesek.gyoztesid
+HAVING COUNT(merkozesek.KO)=1;
+
+10.
+
+13.
+SELECT versenyzok.vnev AS VersenyzoNeve, versenyzok.nem AS Nem, sulycsoport.sulycsoport AS SulyCsoport
+FROM versenyzok
+JOIN merkozesek ON versenyzok.versenyzoid = merkozesek.vnevid1 OR versenyzok.versenyzoid = merkozesek.vnevid2
+JOIN sulycsoport ON merkozesek.sulycsopid = sulycsoport.id
+WHERE versenyzok.szul_ev = 2004;
+
+17.
+
+21.
+
+24.
+
+28.
