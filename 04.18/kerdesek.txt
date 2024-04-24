@@ -1,7 +1,7 @@
 1.	A Hány versenyző vesz részt?
 2.	B Milyen súlycsoportok vannak?
 3.	J Melyik országból jött a legtöbb versenyző idén (2024)?
-4.	A Ki a legöregebb sportoló 2023-as rendezvényen 92+ súlycsoportban? Nevét és születési idejét írassa ki.
+4.	B Ki a legöregebb sportoló 2023-as rendezvényen 92+ súlycsoportban? Nevét és születési idejét írassa ki.
 5.	J Ki a 3 legfiatalabb sportoló 2024-ben? Nevét, születési idejét és országát írassa ki.
 6.	B Hány győzelme (Hámori Luca 66kg-os) versenyzőnek az adatbázisban.
 7.	A Hány győzelme van összesen a Magyar versenyzőknek 2023-ban és 2024-ben összesen?
@@ -20,7 +20,7 @@
 
 Dorina:
 19.	A Listázza azokat a női boxolókat, akik mérkőzéseket nyertek és a születési évüket.
-20.	B Listázza ki a ringet és azoknak a boxolóknak a nevét akik több mérkőzést is nyertek.
+20.	J Listázza ki a ringet és azoknak a boxolóknak a nevét akik több mérkőzést is nyertek.
 
 Tanár úr:
 21.	B Kik azok a versenyzők, akik 2023-ban és 2024-ben is részt vettek a versenyen? Listázza ki a nevüket, országukat, 2023-as súly csoportjukat, 2024-es súly csoportjukat!
