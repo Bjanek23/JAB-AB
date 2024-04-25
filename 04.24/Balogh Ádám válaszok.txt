@@ -1,0 +1,61 @@
+1.SELECT COUNT(vnev)'versenyzők száma'
+FROM versenyzok
+
+
+7.SELECT COUNT(*)
+FROM (
+    SELECT DISTINCT merkozesek.merkozesekid
+    FROM merkozesek
+    JOIN versenyzok  ON merkozesek.gyoztesid = versenyzok.versenyzoid
+    WHERE versenyzok.nemzetiseg = 'Magyar' 
+    AND EXTRACT(YEAR FROM merkozesek.datum) IN (2023, 2024)
+) AS gyozelmek;
+
+12.SELECT v.vnev AS VersenyzoNeve
+FROM versenyzok v
+JOIN merkozesek m ON v.versenyzoid = m.vnevid1 OR v.versenyzoid = m.vnevid2
+JOIN sulycsoport s ON m.sulycsopid = s.id
+WHERE s.sulycsoport > '50+';
+
+
+15.SELECT versenyzok.nemzetiseg AS orszag, COUNT(*) AS gyozelmek_szama
+FROM merkozesek 
+JOIN versenyzok  ON merkozesek.gyoztesid = versenyzok.versenyzoid
+GROUP BY versenyzok.nemzetiseg
+ORDER BY gyozelmek_szama DESC
+LIMIT 1;
+
+
+
+19.SELECT versenyzok.vnev AS boxolo_neve, versenyzok.szul_ev AS szuletesi_ev
+FROM versenyzok 
+JOIN merkozesek  ON merkozesek.gyoztesid = versenyzok.versenyzoid
+WHERE versenyzok.nem = 'no' 
+AND szul_ev IS NOT NULL
+GROUP BY versenyzok.vnev, versenyzok.szul_ev;
+
+20.SELECT merkozesek.ring, versenyzok.vnev
+FROM merkozesek 
+JOIN versenyzok  ON merkozesek.gyoztesid = versenyzok.versenyzoid
+GROUP BY merkozesek.ring, versenyzok.vnev
+HAVING COUNT(*) > 1;
+
+22.
+
+26.SELECT COUNT(*)
+FROM sulycsoport;
+
+
+29.SELECT biroid, bnev, COUNT(merkozesekid) AS merkozesek_szama
+FROM birok
+LEFT JOIN merkozesek ON birok.biroid = merkozesek.b_id
+GROUP BY biroid, bnev
+ORDER BY merkozesek_szama
+LIMIT 3;
+
+
+
+30.
+
+
+
