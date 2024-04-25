@@ -20,7 +20,7 @@
 
 Dorina:
 19.	A Listázza azokat a női boxolókat, akik mérkőzéseket nyertek és a születési évüket.
-20.	A Listázza ki a ringet és azoknak a boxolóknak a nevét akik több mérkőzést is nyertek.
+20.	A Listázza ki azoknak a boxolóknak a nevét, súlycsoportját akik több mérkőzést is nyertek 2024ben.
 
 Tanár úr:
 21.	B Kik azok a versenyzők, akik 2023-ban és 2024-ben is részt vettek a versenyen? Listázza ki a nevüket, országukat, 2023-as súly csoportjukat, 2024-es súly csoportjukat!
