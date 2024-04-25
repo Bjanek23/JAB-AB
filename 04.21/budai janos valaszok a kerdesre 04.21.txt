@@ -26,3 +26,4 @@ SELECT merkozesek.datum,sulycsoport.sulycsoport,COUNT(DISTINCT(versenyzok.versen
 SELECT merkozesek.datum, versenyzok.nem, COUNT(DISTINCT versenyzok.versenyzoid) FROM merkozesek JOIN versenyzok ON merkozesek.vnevid1 = versenyzok.versenyzoid OR merkozesek.vnevid2 = versenyzok.versenyzoid GROUP BY merkozesek.datum, versenyzok.nem ORDER BY merkozesek.datum, versenyzok.nem; 
 
 27. 2024 legtobb gyozelem sulycsoportonként
+SELECT sulycsoport.sulycsoport,versenyzok.vnev,COUNT(merkozesek.gyoztesid) AS gysz FROM versenyzok JOIN merkozesek ON versenyzok.versenyzoid=merkozesek.vnevid1 OR versenyzok.versenyzoid=merkozesek.vnevid2 JOIN sulycsoport ON merkozesek.sulycsopid=sulycsoport.id WHERE merkozesek.datum = 2024 GROUP BY sulycsoport.id,versenyzok.vnev ORDER BY sulycsoport.id, gysz DESC
