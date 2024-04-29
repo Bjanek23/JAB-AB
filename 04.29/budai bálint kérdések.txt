@@ -1,0 +1,10 @@
+Hány különböző termék szerepel az adatbázisban?
+Melyik kategóriában található a legtöbb termék?
+Mennyi az összes rendelés összértéke? 
+Hány darab pulóvert rendeltek összesen? 
+Melyik termék a legdrágább az ár alapján? 
+Hány különböző kategóriában vannak termékek? 
+Hány darab bögrét rendeltek összesen? 
+Melyik termék a legolcsóbb az ár alapján? 
+Hány darab pólót rendeltek összesen? 
+Melyik termék kategóriájában van a legtöbb rendelés? 

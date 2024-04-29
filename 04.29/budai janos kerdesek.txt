@@ -1,0 +1,10 @@
+Mennyi a teljes készlet értéke?
+Mennyi típusonként a készlet értéke?
+Kategóriánként mennyi volt az eddigi értékesítés?
+Melyik hónapban volt a legnagyobb eladás?
+Készítsen listát kategóriánként a termékekről ár szerint csökkenően!
+Listázz ki a 10 legkeresettebb terméket!
+Mely termékek ára van 5000 és 1000 Ft között, csak a nem akciós termékek legyenek a listán!
+Melyek azok a termékek, amelyek ára az átlag felett van?
+Mely felhasználók rendeltek a legtöbb értékben. Jelenítse meg a TOP 10 felhasználót!
+A futárok hányszor szállítottak ki? Legelöl legyen az a ki a legkevesebbszer.

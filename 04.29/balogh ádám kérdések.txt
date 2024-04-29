@@ -1,0 +1,11 @@
+Hány különböző fizetési mód szerepel az adatbázisban? 
+Melyik termékből rendeltek a legtöbbet? 
+Hány különböző címet értek el a szállítások? 
+Melyik termék a legnépszerűbb a rendelések alapján? 
+Hány db különböző méretű ruházatott rendeltek összesen?
+Melyik városban él a legtöbb vevő? 
+Hány darab pulóvert rendeltek az elmúlt hónapban? 
+Mi a legnépszerűbb méret a pólók esetében? 
+Dorina:
+Melyik kategória tartalmazza a legdrágább termékeket? 
+Van aki többször is rendelt a webshopból? Ha igen akkor listázza ki a nevét és a rendelés tartalmát, időpontját.
