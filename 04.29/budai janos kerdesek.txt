@@ -1,7 +1,15 @@
 Mennyi a teljes készlet értéke?
+SELECT SUM(termAr*keszletMenny) FROM termekek
+
 Mennyi típusonként a készlet értéke?
+SELECT termNev,SUM(termAr*keszletMenny) FROM termekek GROUP BY termNev
+
 Kategóriánként mennyi volt az eddigi értékesítés?
+SELECT termNev,termAr FROM termekek GROUP BY termNev
+
 Melyik hónapban volt a legnagyobb eladás?
+
+
 Készítsen listát kategóriánként a termékekről ár szerint csökkenően!
 Listázz ki a 10 legkeresettebb terméket!
 Mely termékek ára van 5000 és 1000 Ft között, csak a nem akciós termékek legyenek a listán!
