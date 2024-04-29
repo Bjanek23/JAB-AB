@@ -1,10 +1,38 @@
 Hány különböző fizetési mód szerepel az adatbázisban? 
+SELECT COUNT(FizNeV)
+FROM fizetes
+
 Melyik termékből rendeltek a legtöbbet? 
+
+
+
 Hány különböző címet értek el a szállítások? 
+SELECT COUNT(szallitasicim)
+FROM felhasznalok
+
 Melyik termék a legnépszerűbb a rendelések alapján? 
+
+
 Hány db különböző méretű ruházatott rendeltek összesen?
+SELECT COUNT(db)
+FROM tetel,termekek
+WHERE tetel.termId=termekek.termId
+
 Melyik városban él a legtöbb vevő? 
+SELECT Nev ,szallitasicim
+FROM felhasznalok
+GROUP BY szallitasicim
+
 Hány darab pulóvert rendeltek az elmúlt hónapban? 
+
+
 Mi a legnépszerűbb méret a pólók esetében? 
+
+
+Dorina:
 Melyik kategória tartalmazza a legdrágább termékeket? 
+
+
 Van aki többször is rendelt a webshopból? Ha igen akkor listázza ki a nevét és a rendelés tartalmát, időpontját.
+SELECT Nev,COUNT(datum)
+FROM felhasznalok,rendeles
