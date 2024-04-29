@@ -1,10 +1,28 @@
 Hány különböző termék szerepel az adatbázisban?
+SELECT count(termNev)
+FROM termekek
+
 Melyik kategóriában található a legtöbb termék?
+SELECT COUNT(termId), KatNev
+FROM termekek,kategoriak,alkategoria
+WHERE termekek.alkatId=alkategoria.alkatId AND kategoriak.katId=alkategoria.katId
+GROUP BY kategoriak.katId
+ORDER BY kategoriak.katId
+
 Mennyi az összes rendelés összértéke? 
+SELECT SUM(termAr*db) "összeg"
+FROM termekek,tetel
+WHERE termekek.termId=tetel.termId
+
 Hány darab pulóvert rendeltek összesen? 
-Melyik termék a legdrágább az ár alapján? 
+
 Hány különböző kategóriában vannak termékek? 
+Melyik termék a legdrágább az ár alapján? 
+SELECT MAX(termAr) AS legnagyobb, termNev
+FROM termekek
+
 Hány darab bögrét rendeltek összesen? 
 Melyik termék a legolcsóbb az ár alapján? 
 Hány darab pólót rendeltek összesen? 
 Melyik termék kategóriájában van a legtöbb rendelés? 
+Hány különböző fizetési mód szerepel az adatbázisban? 
